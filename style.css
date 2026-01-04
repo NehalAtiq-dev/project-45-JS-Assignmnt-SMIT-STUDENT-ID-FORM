@@ -1,0 +1,235 @@
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(135deg, #580c52, #062b4e);
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .form-section {
+            width: 450px; 
+            padding: 35px;
+            background: linear-gradient(135deg, #1f1c2c, #3f2b96);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-header h2 {
+            color: #12f09b;
+            font-size: 39px;
+            font-family: "Playfair Display", serif;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .form-header p {
+            color: #00c6ff;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #b0b0b0;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .input-group input, 
+        .input-group select {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a222c;
+            border: 1px solid #3d4b5c;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus, 
+        .input-group select:focus {
+            border-color: #00c6ff;
+            box-shadow: 0 0 10px rgba(0, 198, 255, 0.2);
+            outline: none;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(111, 0, 255, 0.555);
+        }
+
+        .preview-section {
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .id-card {
+            width: 340px;
+            height: 500px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
+        .card-header {
+            background: #004aad;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgb(233, 116, 7);
+            padding-bottom: 30px;
+        }
+
+        .card-header h3 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 28px;
+            letter-spacing: 1px;
+        }
+
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            background: #fff;
+            border-radius: 50%;
+            margin: -65px auto 15px;
+            position: relative;
+            border: 5px solid #fff;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 0 25px;
+        }
+
+        .student-name {
+            font-size: 22px;
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .course-name {
+            font-size: 13px;
+            color: #ff7b00;
+            margin-bottom: 20px;
+            background: #f0f7ff;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            border: 1px solid #cce4ff;
+        }
+
+        .details-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f2f2f2;
+            padding-bottom: 6px;
+        }
+
+        .detail-label {
+            color: #999;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .detail-value {
+            color: #222;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .card-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #eb820b;
+            border-top: 1px solid #eee;
+            color: #111111;
+            text-align: center;
+            padding: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 500px) {
+            .form-section {
+                width: 100%;
+            }
+        }
